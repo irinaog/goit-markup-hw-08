@@ -1,0 +1,79 @@
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.footer {
+  background-color: #2f303a;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.adress {
+  margin-top: 20px;
+
+  color: $white-color;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer__contacts {
+  .footer__contacts-item {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
+  }
+}
+
+.footer__network-link {
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 0;
+}
+
+.footer__features-title {
+  color: $white-color;
+  margin-bottom: 20px;
+}
+
+.followbox {
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+
+.subscribe {
+  @media screen and (min-width: 1200px) {
+    margin-left: 94px;
+  }
+}
+
+.subscribe__wrap {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.subscribe__input {
+  height: 50px;
+  width: 358px;
+  margin-right: 12px;
+  padding: 15px 16px;
+
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: $white-color;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
