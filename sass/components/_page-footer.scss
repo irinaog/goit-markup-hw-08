@@ -23,10 +23,23 @@
   line-height: 1.7;
 }
 
+.adress--flex {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .footer__contacts {
   .footer__contacts-item {
     color: rgba(255, 255, 255, 0.6);
-    margin-top: 9px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 9px;
+    }
   }
 }
 
@@ -41,14 +54,24 @@
 }
 
 .followbox {
+  margin-top: 60px;
   @media screen and (min-width: 1200px) {
+    margin-top: 0px;
     margin-left: 70px;
   }
 }
 
 .subscribe {
+  margin-top: 60px;
+
   @media screen and (min-width: 1200px) {
+    margin-top: 0;
     margin-left: 94px;
+  }
+  .button {
+    @media screen and (max-width: 1199px) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -62,7 +85,7 @@
 
 .subscribe__input {
   height: 50px;
-  width: 358px;
+  width: 100%;
   margin-right: 12px;
   padding: 15px 16px;
 
@@ -70,6 +93,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: $white-color;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .icon-send {

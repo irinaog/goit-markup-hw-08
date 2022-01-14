@@ -1,7 +1,23 @@
 .menu-container {
   display: none;
-  position: absolute;
 }
+
+.menu-container.is-open {
+  display: block;
+  padding: 48px 40px;
+
+  background: $white-color;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.menu-button {
+  z-index: 20;
+}
+
 .menu-button .icon-cross {
   display: none;
 }
@@ -10,4 +26,14 @@
 }
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.links {
+  display: flex;
+
+  color: $accent-color;
+  margin-top: 64px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
