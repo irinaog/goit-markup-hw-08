@@ -1,6 +1,11 @@
 .footer .container {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
   }
@@ -51,10 +56,18 @@
 .footer__features-title {
   color: $white-color;
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
 }
 
 .followbox {
   margin-top: 60px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+    margin-left: 165px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-top: 0px;
     margin-left: 70px;
@@ -81,6 +94,9 @@
   @media screen and (min-width: 1200px) {
     flex-direction: row;
   }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .subscribe__input {
@@ -93,6 +109,9 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: $white-color;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
   @media screen and (min-width: 1200px) {
     width: 358px;
   }

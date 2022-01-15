@@ -1,5 +1,15 @@
 .menu-container {
   display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: relative;
+    padding: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    position: relative;
+    padding: 0;
+  }
 }
 
 .menu-container.is-open {
@@ -9,30 +19,91 @@
   background: $white-color;
 
   position: absolute;
+  z-index: 18;
   top: 0;
   left: 0;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    position: relative;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu-button {
   z-index: 20;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-btn__icon {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-button .icon-cross {
   display: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
 .menu-button.is-open .icon-cross {
   display: block;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
 .menu-button.is-open .icon-menu {
   display: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.contacts__item-mob {
+  & + .contacts__item-mob {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.contacts__link-mob {
+  font-family: inherit;
+  font-weight: 500;
+  &.tel {
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    color: $accent-color;
+  }
+  &.mail {
+    font-size: 24px;
+    line-height: 1.16px;
+    letter-spacing: 0.02em;
+
+    color: $text-color;
+  }
 }
 
 .links {
   display: flex;
 
-  color: $accent-color;
   margin-top: 64px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-link {
+  color: $accent-color;
   @media screen and (min-width: 768px) {
     display: none;
   }

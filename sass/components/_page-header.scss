@@ -6,16 +6,27 @@
 .header__container {
   display: flex;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
   justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 768px;
+    margin: 0 auto;
+  }
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
 .sitenav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     margin-left: 93px;
@@ -23,7 +34,7 @@
 }
 
 .sitenav__link {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -38,7 +49,7 @@
 
 .sitenav__item + .sitenav__item {
   margin-top: 32px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     margin-top: 0;
     margin-left: 50px;
   }
@@ -52,7 +63,7 @@
   line-height: 1.15;
   letter-spacing: 0.02em;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     margin-top: 0;
     font-size: 14px;
     line-height: 1.2;
@@ -67,7 +78,7 @@
 }
 
 .sitenav__link--active::after {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     content: "";
 
     background-color: $accent-color;
@@ -85,6 +96,12 @@
 
 .contacts {
   margin-top: 302px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
   @media screen and (min-width: 1200px) {
     margin-top: 0;
     display: flex;
@@ -93,7 +110,10 @@
 }
 
 .contacts__link {
-  @media screen and (min-width: 1200px) {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
     color: $text-color;
 
     font-weight: 500;
@@ -125,11 +145,22 @@
   }
 }
 
-.contacts__item + .contacts__item {
-  margin-top: 32px;
-  @media screen and (min-width: 1200px) {
-    margin-left: 50px;
+.contacts__item {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
     margin-top: 0;
+    & + .contacts__item {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+
+    & + .contacts__item {
+      margin-left: 50px;
+      margin-top: 0;
+    }
   }
 }
 
@@ -139,8 +170,9 @@
 
 .contacts__icon-envelope {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     @include mr();
+    display: block;
     width: 16px;
     height: 12px;
   }
@@ -148,8 +180,9 @@
 
 .contacts__icon-smartphone {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     @include mr();
+    display: block;
     width: 10px;
     height: 16px;
   }
