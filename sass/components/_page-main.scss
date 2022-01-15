@@ -1,9 +1,7 @@
 .section {
-  padding-top: $container-padding-mobile;
-  padding-bottom: $container-padding-mobile;
+  padding: $container-padding-mobile 15px;
   @media screen and (min-width: 1200px) {
-    padding-top: $container-padding;
-    padding-bottom: $container-padding;
+    padding: $container-padding;
   }
 }
 
@@ -46,7 +44,7 @@
 .hero--overlay {
   max-width: 480px;
   height: 400px;
-  margin: 0 auto;
+  margin: 0;
   background-image: linear-gradient(to top, #2f303a66, #2f303a66),
     url(../images/img-bcg-mob.jpg);
   background-repeat: no-repeat;
@@ -223,8 +221,6 @@
 //--section team--//
 .section-team {
   background: #f5f4fa;
-  padding-top: $container-padding;
-  padding-bottom: $container-padding;
 }
 
 .member {
