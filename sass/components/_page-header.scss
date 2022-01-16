@@ -8,13 +8,13 @@
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
+  padding: 0 15px;
 
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
     width: 768px;
     margin: 0 auto;
-    padding: 0 15px;
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;
@@ -25,7 +25,6 @@
 .sitenav {
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: 88px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -101,7 +100,6 @@
     margin-top: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 84px;
   }
   @media screen and (min-width: 1200px) {
     margin-top: 0;

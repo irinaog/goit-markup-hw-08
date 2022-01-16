@@ -24,7 +24,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
+  max-width: 450px;
   @media screen and (min-width: 768px) {
     width: 738px;
   }
@@ -110,7 +110,7 @@
   }
 }
 .features__item {
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 30px;
   @media screen and (min-width: 768px) {
     width: 354px;
@@ -128,8 +128,8 @@
 
 .features__iconbox {
   margin-bottom: 30px;
-  padding: 25px 192.34px;
-  width: 450px;
+  padding: 25px 165.34px;
+  max-width: 450px;
   height: 120px;
   background: #f5f4fa;
   @media screen and (min-width: 768px) {
@@ -238,7 +238,7 @@
 }
 
 .member__item {
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 30px;
   padding-bottom: 24px;
 
@@ -315,7 +315,7 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
@@ -325,9 +325,8 @@
 
 .clients__link {
   display: inline-block;
-  width: 210px;
   height: 92px;
-  padding: 16px 52px;
+  padding: 16px 40px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -353,9 +352,6 @@
 
 .clients__item {
   @media screen and (max-width: 767px) {
-    &:nth-child(2n) {
-      margin-left: 30px;
-    }
     &:nth-child(n + 3) {
       margin-top: 30px;
     }
