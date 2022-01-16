@@ -47,26 +47,6 @@ img {
 
 .menu-container {
   display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-container {
-    display: block;
-    position: relative;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .menu-container {
-    display: block;
-    position: relative;
-    padding: 0;
-  }
-}
-
-.menu-container.is-open {
-  display: block;
   padding: 48px 40px;
   background: #fff;
   position: absolute;
@@ -76,16 +56,23 @@ img {
   width: 100%;
 }
 
+.menu-container.is-open {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
-  .menu-container.is-open {
-    position: relative;
-    padding: 0;
+  .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
+    padding: 0;
   }
 }
 
@@ -106,7 +93,7 @@ img {
 }
 
 .menu-button .icon-cross {
-  display: none;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -116,7 +103,7 @@ img {
 }
 
 .menu-button.is-open .icon-cross {
-  display: block;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -126,11 +113,21 @@ img {
 }
 
 .menu-button.is-open .icon-menu {
-  display: none;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
   .menu-button.is-open .icon-menu {
+    display: none;
+  }
+}
+
+.menu-button .icon-menu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button .icon-menu {
     display: none;
   }
 }
@@ -258,6 +255,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: 88px;
   }
 }
 
@@ -337,9 +335,10 @@ img {
   margin-top: 302px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     margin-top: 0;
+    max-width: 160px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -746,20 +745,20 @@ img {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 450px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    max-width: 738px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1282,6 +1281,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__contacts .footer__contacts-item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     margin-top: 9px;
   }
 }
